@@ -1,0 +1,30 @@
+{
+  "name": "skaz",
+  "version": "1.0.0",
+  "description": "MEAN Stack with Angular 2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keenandrea/skaz_blog.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Stack",
+    "Angular",
+    "2",
+    "Application"
+  ],
+  "author": "Keenan Andrea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keenandrea/skaz_blog/issues"
+  },
+  "homepage": "https://github.com/Keenandrea/skaz_blog#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0"
+  }
+}
