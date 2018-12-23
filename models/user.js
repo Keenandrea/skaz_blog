@@ -36,12 +36,6 @@ const emailValidators = [
 ];
 
 
-const userSchema = new Schema({
-   email: { type: String, required: true, unique: true, lowercase: true, validate: emailValidators },
-   username: { type: String, required: true, unique: true, lowercase: true, usernameValidators },
-   password: { type: String, required: true, validate: passwordValidators },
-});
-
 let usernameLengthChecker = (username) => {
     if(!username) {
         return false;
@@ -104,6 +98,13 @@ const passwordValidators = [
         message: 'Must have at least one uppercase, lowercase, special character, and number'
     }
 ];
+
+
+const userSchema = new Schema({
+    email: { type: String, required: true, unique: true, lowercase: true, validate: emailValidators },
+    username: { type: String, required: true, unique: true, lowercase: true, validate: usernameValidators },
+    password: { type: String, required: true, validate: passwordValidators },
+ });
 
 userSchema.pre('save', function(next) {
     if(!this.isModified('password')) 
