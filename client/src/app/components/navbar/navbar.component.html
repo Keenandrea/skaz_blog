@@ -49,7 +49,7 @@
             <a routerLink="/dashboard">Dashboard</a>
           </li>
           <li><a *ngIf="authService.loggedIn()" routerLink="/profile">Profile</a></li>
-          <li><a *ngIf="authService.loggedIn()" href="#contact">Blog</a></li>
+          <li><a *ngIf="authService.loggedIn()" routerLink="/blog">Blog</a></li>
           <li><a *ngIf="!authService.loggedIn()" routerLink="/login">Login</a></li>
           <li><a *ngIf="authService.loggedIn()" href="#" (click)="onLogoutClick()">Logout</a></li>
           <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
